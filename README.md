@@ -10,3 +10,9 @@ Just restart the container and the latest wsusoffline version will be downloaded
 Update folder: /my-folder:/client    
 Time: /etc/localtime:/etc/localtime (ro - read only)   
 Runs every day @ 04:00 (morning)    
+
+### ENV Default
+SYSTEM=all-x64    
+OFFICE=ofc   
+LANGUAGE=nld   
+PARAMS="/dotnet /msse /wddefs /wle"   
