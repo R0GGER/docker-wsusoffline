@@ -9,8 +9,6 @@ ENV OFFICE=ofc
 ENV LANGUAGE=nld
 ENV PARAMS="/dotnet /msse /wddefs /wle"
 
-VOLUME ["/app/wsusoffline"]
-
 ADD crons.conf /app/crons.conf
 ADD run.sh /app/run.sh
 ADD update.sh /etc/my_init.d/update.sh
@@ -20,5 +18,7 @@ RUN cron
 
 RUN chmod +x /app/run.sh
 RUN chmod +x /etc/my_init.d/update.sh
+RUN ln -s /app/wsusoffline/client /client
 
+VOLUME ["/client"]
 CMD ["/sbin/my_init"]
