@@ -9,6 +9,12 @@ RUN apt-get update && apt-get install -y \
         cabextract \
         genisoimage
 
+#ENV WIN=w61-x64 \
+#    OFFICE=sickrage \
+#    EXTRA= \
+#    OPTOINS=iso etc \
+#    LANG=nld
+
 VOLUME ["/app/wsusoffline"]
 
 ADD crons.conf /app/crons.conf
