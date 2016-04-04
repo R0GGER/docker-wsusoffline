@@ -1,4 +1,4 @@
 # docker-wsusoffline
 
-***For personal use!!***   
-/my-windows-folder:/client
+Cron: Every day @ 04:00 (morning)    
+Folder: /my-windows-folder:/client    
