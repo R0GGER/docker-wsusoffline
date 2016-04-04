@@ -1,4 +1,12 @@
-# docker-wsusoffline
+# WSUS Offline Update
 
-Cron: Every day @ 04:00 (morning)    
-Folder: /my-windows-folder:/client    
+Using "WSUS Offline Update", you can update any computer running Microsoft Windows and Office safely, quickly and without an Internet connection.
+
+-----------
+## Auto update
+Just restart the container and the latest wsusoffline version will be downloaded.
+
+## Configuration
+Update folder: /my-folder:/client    
+Time: /etc/localtime:/etc/localtime (ro - read only)   
+Runs every day @ 04:00 (morning)    
