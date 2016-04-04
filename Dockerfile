@@ -1,18 +1,13 @@
 FROM phusion/baseimage:0.9.18
 MAINTAINER R0GGER
 
-RUN apt-get update && apt-get install -y \
-        unzip \
-        md5deep \
-        wget \
-        xmlstarlet \
-        cabextract \
-        genisoimage
+RUN apt-get update 
+RUN apt-get install -y unzip md5deep wget xmlstarlet cabextract genisoimage
 
-ENV SYSTEM=all-x64 \
-    OFFICE=ofc \
-    LANGUAGE=nld \
-    PARAMS=/dotnet /msse /wddefs /wle
+ENV SYSTEM=all-x64
+ENV OFFICE=ofc
+ENV LANGUAGE=nld
+ENV PARAMS=/dotnet /msse /wddefs /wle
 
 VOLUME ["/app/wsusoffline"]
 
