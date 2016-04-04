@@ -8,7 +8,7 @@ Just restart the container and the latest wsusoffline version will be downloaded
 
 ## Configuration
 Update folder: /my-folder:/client    
-Time: /etc/localtime:/etc/localtime (ro - read only)   
+Time: /etc/localtime:/etc/localtime:ro (read only)   
 Runs every day @ 04:00 (morning)    
 
 ## ENV Default
