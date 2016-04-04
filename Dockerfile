@@ -7,7 +7,7 @@ RUN apt-get install -y unzip md5deep wget xmlstarlet cabextract genisoimage
 ENV SYSTEM=all-x64
 ENV OFFICE=ofc
 ENV LANGUAGE=nld
-ENV PARAMS=/dotnet /msse /wddefs /wle
+ENV PARAMS="/dotnet /msse /wddefs /wle"
 
 VOLUME ["/app/wsusoffline"]
 
