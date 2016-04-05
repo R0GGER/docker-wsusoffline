@@ -40,6 +40,6 @@ If param `/makeiso` is set add `-v <path to iso's>:/iso`.
 `/makeiso`   - create ISO image   
     
     
-**Credits:**
-WSUS Offline Update @ http://wsusoffline.net  
+**Credits:**   
+WSUS Offline Update @ http://wsusoffline.net   
 wsusoffline forum-user:  hbuhrmester.
