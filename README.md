@@ -41,5 +41,5 @@ If param `/makeiso` is set add `-v <path to iso's>:/iso`.
     
     
 **Credits:**
-- WSUS Offline Update @ http://wsusoffline.net  
-- wsusoffline forum-user:  hbuhrmester.
+WSUS Offline Update @ http://wsusoffline.net  
+wsusoffline forum-user:  hbuhrmester.
