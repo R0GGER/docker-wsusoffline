@@ -17,7 +17,7 @@ if (( $? == 0 )); then
     exit 0;
 else
     URL=$(cat ../static/StaticDownloadLink-recent.txt)
-    echo We need to update wsusoffline!
+    echo Updating WSUS Offline Update..!
     cd ../temp/
     wget -q $URL
     HASH=$(echo $URL |sed 's/\.zip/_hashes.txt/')
