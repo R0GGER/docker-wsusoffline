@@ -6,9 +6,15 @@ Using "WSUS Offline Update", you can update any computer running Microsoft Windo
 #### Auto update
 Just restart the container and the latest wsusoffline version will be downloaded.
 
-### Configuration
-Update folder: `/my-folder:/client`    
-Time: `/etc/localtime:/etc/localtime:ro` (read only)   
+### Usage
+```
+docker create --name=wsusoffline \
+-v /etc/localtime:/etc/localtime:ro \
+-v <path to data>:/client \
+-e SYSTEMS="all-100" -e OFFICE="o2k16" \
+-e LANGUAGE="enu" -e PARAMS="/dotnet /wddefs /makeiso" \
+r0gger/docker-wsusoffline
+```
 
 ### Environment Variables
 **SYSTEMS:**    
@@ -29,6 +35,7 @@ Time: `/etc/localtime:/etc/localtime:ro` (read only)
 `/wle`       - download Essentials   
 `/proxy`     - define proxy server (/proxy http://[username:password@]<server>:<port>)   
 `/makeiso`   - create ISO image   
+
 
 > **Credits:**
 > - WSUS Offline Update @ http://wsusoffline.net  
