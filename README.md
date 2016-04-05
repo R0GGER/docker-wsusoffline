@@ -16,7 +16,7 @@ docker create --name=wsusoffline \
 r0gger/docker-wsusoffline
 ```
 **Optional:**   
-If PARAM ``/makeiso` is set add `-v <path to iso's>:/iso`.
+If PARAM `/makeiso` is set add `-v <path to iso's>:/iso`.
 
 ### Environment Variables
 **SYSTEMS:**    
