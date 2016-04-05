@@ -1,4 +1,14 @@
-!/bin/bash
+#!/bin/sh
 
-cd /app/wsusoffline/sh && ./DownloadUpdates.sh "$SYSTEM" "$LANGUAGE" "$PARAMS"
-cd /app/wsusoffline/sh && ./DownloadUpdates.sh "$OFFICE" "$LANGUAGE" "$PARAMS"
+for SYSTEMS in ${SYSTEMS}; do
+    for LANGUAGE in ${LANGUAGE}; do
+        cd /app/wsusoffline/sh && ./DownloadUpdates.sh ${SYSTEMS} ${LANGUAGE} ${PARAMS}
+    done
+done
+
+for OFFICE in ${OFFICE}; do
+    for LANGUAGE in ${LANGUAGE}; do
+       cd /app/wsusoffline/sh && ./DownloadUpdates.sh ${OFFICE} ${LANGUAGE}
+    done
+done
+
