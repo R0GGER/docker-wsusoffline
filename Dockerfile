@@ -19,6 +19,7 @@ RUN cron
 RUN chmod +x /app/run.sh
 RUN chmod +x /etc/my_init.d/update.sh
 RUN ln -s /app/wsusoffline/client /client
+RUN ln -s /app/wsusoffline/iso /iso
 
 VOLUME ["/client"]
 CMD ["/sbin/my_init"]
