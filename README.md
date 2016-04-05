@@ -11,8 +11,8 @@ Just restart the container and the latest wsusoffline version will be downloaded
 docker create --name=wsusoffline \
 -v /etc/localtime:/etc/localtime:ro \
 -v <path to updates>:/client \
--e SYSTEMS="all-100" -e OFFICE="o2k16" \
--e LANGUAGE="enu" -e PARAMS="/dotnet /wddefs /makeiso" \
+-e SYSTEMS="all-62 all-63 all-100" -e OFFICE="o2k10 o2k13 o2k16" \
+-e LANGUAGE="enu" -e PARAMS="/dotnet /msse /wddefs /wle" \
 r0gger/docker-wsusoffline
 ```
 **Optional:**   
