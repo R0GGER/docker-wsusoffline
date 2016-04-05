@@ -3,7 +3,7 @@
 Using "WSUS Offline Update", you can update any computer running Microsoft Windows and Office safely, quickly and without an Internet connection. It runs every morning at 04:00 o'çlock.
 
 -----------
-#### Auto update
+### Auto update
 Just restart the container and the latest wsusoffline version will be downloaded.
 
 ### Usage
@@ -35,8 +35,8 @@ r0gger/docker-wsusoffline
 `/wle`       - download Essentials   
 `/proxy`     - define proxy server (/proxy http://[username:password@]<server>:<port>)   
 `/makeiso`   - create ISO image   
-
-
+    
+    
 > **Credits:**
 > - WSUS Offline Update @ http://wsusoffline.net  
 > - wsusoffline forum-user:  hbuhrmester.
