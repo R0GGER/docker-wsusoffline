@@ -1,6 +1,6 @@
 # WSUS Offline Update
 
-Using "WSUS Offline Update", you can update any computer running Microsoft Windows and Office safely, quickly and without an Internet connection. It runs every morning at 04:00 o'çlock.
+Using "WSUS Offline Update", you can update any computer running Microsoft Windows and Office safely, quickly and without an Internet connection. It runs every morning at 04:00 o'clock.
 
 -----------
 ### Auto update
