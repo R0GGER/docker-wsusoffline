@@ -4,7 +4,7 @@ MAINTAINER R0GGER
 RUN apt-get update 
 RUN apt-get install -y unzip md5deep wget xmlstarlet cabextract genisoimage nano
 
-ENV SYSTEMS="w62 w62-x64 w63 w63-x64 w100 w100-x64"
+ENV SYSTEMS="all-62 all-63 all-100"
 ENV OFFICE="o2k10 o2k13 o2k16"
 ENV LANGUAGE="nld enu"
 ENV PARAMS="/dotnet /msse /wddefs /wle"
