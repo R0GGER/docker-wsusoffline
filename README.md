@@ -22,7 +22,7 @@ If param `/makeiso` is set add `-v <path to iso's>:/iso`.
 
 ### Environment Variables
 **CRON:**   
-`* 12,0 * * *`
+`* 12,0 * * *` - more info: http://crontab.guru
 
 **TIMEZONE:**   
 `Europe/Amsterdam` - more info: http://php.net/manual/en/timezones.europe.php
