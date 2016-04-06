@@ -13,6 +13,7 @@ docker create --name=wsusoffline \
 -v <path to updates>:/client \
 -e SYSTEMS="all-62 all-63 all-100" -e OFFICE="o2k10 o2k13 o2k16" \
 -e LANGUAGE="enu" -e PARAMS="/dotnet /msse /wddefs /wle" \
+-e CRON="* 12,0 * * *" -e TIMEZONE="Europe/Amsterdam"
 r0gger/docker-wsusoffline
 ```
     
@@ -20,6 +21,12 @@ r0gger/docker-wsusoffline
 If param `/makeiso` is set add `-v <path to iso's>:/iso`.
 
 ### Environment Variables
+**CRON:**   
+`* 12,0 * * *`
+
+**TIMEZONE:**   
+`Europe/Amsterdam` - More info: http://php.net/manual/en/timezones.europe.php
+
 **SYSTEMS:**    
 `w60 w60-x64 w61 w61-x64 w62-x64 w63 w63-x64 w100 w100-x64 all-x86 all-x64 all-61 all-62 all-63 all-100`
 
