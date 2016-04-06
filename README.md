@@ -25,7 +25,7 @@ If param `/makeiso` is set add `-v <path to iso's>:/iso`.
 `* 12,0 * * *`
 
 **TIMEZONE:**   
-`Europe/Amsterdam` - More info: http://php.net/manual/en/timezones.europe.php
+`Europe/Amsterdam` - more info: http://php.net/manual/en/timezones.europe.php
 
 **SYSTEMS:**    
 `w60 w60-x64 w61 w61-x64 w62-x64 w63 w63-x64 w100 w100-x64 all-x86 all-x64 all-61 all-62 all-63 all-100`
