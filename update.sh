@@ -56,4 +56,4 @@ if [ -d ../temp ]; then
 fi
 
 find ../ -name '*.sh' -print0 | xargs -0 chmod +x
-sh /app/run.sh
+#sh /app/run.sh
