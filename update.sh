@@ -57,4 +57,4 @@ fi
 
 find ../ -name '*.sh' -print0 | xargs -0 chmod +x
 echo "${CRON} /bin/sh /cron/run.sh" > /cron/crontab
-#/bin/sh /cron/run.sh
+/bin/sh /cron/run.sh
