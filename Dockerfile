@@ -21,7 +21,6 @@ RUN ln -s /app/wsusoffline/iso /iso
 RUN pip install -e hg+https://bitbucket.org/dbenamy/devcron#egg=devcron
 RUN mkdir /cron
 ADD run.sh /cron/run.sh
-RUN echo "${CRON} /bin/sh /cron/run.sh" > /cron/crontab
 RUN chmod a+x /cron/run.sh
 
 # SET TIMEZONE
