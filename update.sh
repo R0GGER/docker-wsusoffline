@@ -54,7 +54,11 @@ cd $BASEPATH
 if [ -d ../temp ]; then
    rm -rf ../temp
 fi
-
 find ../ -name '*.sh' -print0 | xargs -0 chmod +x
+
+# SET CRON
 echo "${CRON} /bin/sh /cron/run.sh" > /cron/crontab
+# SET TIMEZONE
+echo "${TIMEZONE}" > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
+# RUN
 /bin/sh /cron/run.sh
