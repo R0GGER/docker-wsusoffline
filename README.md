@@ -22,14 +22,9 @@ docker create
         -e TIMEZONE="Europe/Amsterdam" \
         r0gger/docker-wsusoffline
 ```
-    
-- `-v <path to updates>:/client` - Default update folder   
-- `-v /etc/localtime` - Timesync   
-- `-e SYSTEMS="all-62 all-63 all-100"` - MS Windows versions   
-- `-e OFFICE="o2k10 o2k13 o2k16` - MS Office versions   
-- `-e PARAMS="/dotnet /msse /wddefs /wle"` - Extra packages such as dotNet etc   
-- `-e CRON="* 12,0 * * *` - Time/days when WSUS Offline Update when should download updates   
-- `-e  TIMEZONE="Europe/Amsterdam"` - Timezone   
+### Volumes    
+`-v <path to updates>:/client` - Default update folder   
+`-v /etc/localtime` - Timesync   
 
 **Optional:** If param `/makeiso` is set add `-v <path to iso's>:/iso`.
 
