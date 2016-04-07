@@ -19,7 +19,7 @@ docker create
         -e LANGUAGE="enu" \
         -e PARAMS="/dotnet /msse /wddefs /wle" \
         -e CRON="* 12,0 * * *" \
-        -e  TIMEZONE="Europe/Amsterdam" \
+        -e TIMEZONE="Europe/Amsterdam" \
         r0gger/docker-wsusoffline
 ```
     
