@@ -14,7 +14,7 @@ docker create
         --name=wsusoffline \
         -v /etc/localtime:/etc/localtime:ro \
         -v <path to updates>:/client \
-        -e SYSTEMS="all-62 all-63 all-100" \
+        -e SYSTEMS="all-61 all-63 all-100" \
         -e OFFICE="o2k10 o2k13 o2k16" \
         -e LANGUAGE="enu" \
         -e PARAMS="/dotnet /msse /wddefs /wle" \
@@ -38,6 +38,7 @@ docker create
 **SYSTEMS:**    
 `w60 w60-x64 w61 w61-x64 w62-x64 w63 w63-x64 w100 w100-x64 all-x86 all-x64 all-61 all-62 all-63 all-100`   
 
+`w60` / `w60-x64` - Windows Vista / Windows Server 2008   
 `w61`/`w61_x64` - Windows 7 / Windows Server 2008 R2       
 `w62_x64`	- Windows Server 2012   
 `w63`/`w63_x64` - Windows 8.1 / Windows Server 2012 R2    
