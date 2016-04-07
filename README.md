@@ -11,12 +11,12 @@ Just restart the container and the latest wsusoffline version will be downloaded
 docker create --name=wsusoffline -v /etc/localtime:/etc/localtime:ro -v <path to updates>:/client -e SYSTEMS="all-62 all-63 all-100" -e OFFICE="o2k10 o2k13 o2k16" -e LANGUAGE="enu" -e PARAMS="/dotnet /msse /wddefs /wle" -e CRON="* 12,0 * * *" -e  TIMEZONE="Europe/Amsterdam" r0gger/docker-wsusoffline
 ```
     
-`-v <path to updates>:/client` - Default update folder.   
-`-v /etc/localtime for timesync` for timesync.   
-`-e SYSTEMS="all-62 all-63 all-100"` - MS Windows versions.   
-`-e OFFICE="o2k10 o2k13 o2k16` - MS Office versions.   
-`-e PARAMS="/dotnet /msse /wddefs /wle"` - extra packages such as dotNet etc.   
-`-e CRON="* 12,0 * * *` - time/days when WSUS Offline Update when should download updates.   
+`-v <path to updates>:/client` - Default update folder
+`-v /etc/localtime` - timesync   
+`-e SYSTEMS="all-62 all-63 all-100"` - MS Windows versions   
+`-e OFFICE="o2k10 o2k13 o2k16` - MS Office versions   
+`-e PARAMS="/dotnet /msse /wddefs /wle"` - extra packages such as dotNet etc   
+`-e CRON="* 12,0 * * *` - time/days when WSUS Offline Update when should download updates   
 
 **Optional:** If param `/makeiso` is set add `-v <path to iso's>:/iso`.
 
