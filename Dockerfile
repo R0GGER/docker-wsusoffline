@@ -23,9 +23,5 @@ RUN mkdir /cron
 ADD run.sh /cron/run.sh
 RUN chmod a+x /cron/run.sh
 
-# SET TIMEZONE
-RUN echo "${TIMEZONE}" > /etc/timezone
-RUN dpkg-reconfigure -f noninteractive tzdata
-
 VOLUME ["/client", "/iso"]
 CMD ["/sbin/my_init", "devcron.py", "/cron/crontab"]
