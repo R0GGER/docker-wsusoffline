@@ -10,7 +10,17 @@ Just restart the container and the latest wsusoffline version will be downloaded
 By default it runs twice a day to download updates from Microsoft @ 12:00 and 00.00 o'clock, but if you prefer your own timetable change the CRON environment variable.   
 
 ```
-docker create --name=wsusoffline -v /etc/localtime:/etc/localtime:ro -v <path to updates>:/client -e SYSTEMS="all-62 all-63 all-100" -e OFFICE="o2k10 o2k13 o2k16" -e LANGUAGE="enu" -e PARAMS="/dotnet /msse /wddefs /wle" -e CRON="* 12,0 * * *" -e  TIMEZONE="Europe/Amsterdam" r0gger/docker-wsusoffline
+docker create 
+        --name=wsusoffline \
+        -v /etc/localtime:/etc/localtime:ro \
+        -v <path to updates>:/client \
+        -e SYSTEMS="all-62 all-63 all-100" \
+        -e OFFICE="o2k10 o2k13 o2k16" \
+        -e LANGUAGE="enu" \
+        -e PARAMS="/dotnet /msse /wddefs /wle" \
+        -e CRON="* 12,0 * * *" \
+        -e  TIMEZONE="Europe/Amsterdam" \
+        r0gger/docker-wsusoffline
 ```
     
 - `-v <path to updates>:/client` - Default update folder   
