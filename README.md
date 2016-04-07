@@ -60,12 +60,12 @@ docker create
 `enu deu nld esn fra ptg ptb ita rus plk ell csy dan nor sve fin jpn kor chs cht hun trk ara heb`
 
 **PARAMS:**   
-`/excludesp` - Do not download servicepacks
-`/dotnet` - Download .NET framework
-`/msse` - Download Microsoft Security Essentials files
-`/wddefs` - Download Windows Defender definition files
-`/nocleanup` - Do not cleanup client directory  
-`/wle` - Download Essentials  
+`/excludesp` - Do not download servicepacks   
+`/dotnet` - Download .NET framework   
+`/msse` - Download Microsoft Security Essentials files   
+`/wddefs` - Download Windows Defender definition files   
+`/nocleanup` - Do not cleanup client directory   
+`/wle` - Download Essentials   
 `/proxy` - Define proxy server (/proxy http://[username:password@]<server>:<port>)   
 `/makeiso` - Create ISO image   
 
