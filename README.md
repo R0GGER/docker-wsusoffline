@@ -65,6 +65,11 @@ docker create
 `/proxy` - Define proxy server (/proxy http://[username:password@]<server>:<port>)   
 `/makeiso` - Create ISO image   
 
+**Changelog:**   
+Apr 9, 2016 - Temp fix: hashdeep error wsusoffline 10.6.1   
+Apr 7, 2016 - Fix: timezone   
+Apr 6, 2016 - Fix: cron   
+Apr 5, 2016 - Release   
     
 **Credits:**   
 WSUS Offline Update @ http://wsusoffline.net   
