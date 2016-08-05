@@ -1,64 +1,84 @@
 #!/bin/bash
+ 
+#
+# Author:       Carlos Pasqualini
+# email:        carlos [at] carlospasqualini.com.ar
+# Website:      http://www.carlospasqualini.com.ar/
 
-cd "$(dirname "$0")"
-BASEPATH=/app/wsusoffline/
-if [ ! -d ../temp ]; then
-   mkdir ../temp
+#
+# Rev: 3
+#
+# Contributors:
+#   spfef
+#   hbuhrmester
+#
+# License:      GPLv3+
+#               ../doc/license.txt
+#
+# disable Debugging
+#DEBUG=true
+# enable Debugging
+DEBUG=echo
+# 
+# Go to script's path as a start:
+BASEPATH="$(pwd)/wsusoffline"
+if [ ! -d /temp ]; then
+   mkdir /temp
 fi
-wget --timestamping --directory-prefix="../static" \
+wget --timestamping --directory-prefix="static" \
     "http://download.wsusoffline.net/StaticDownloadLink-recent.txt"
 
 diff --strip-trailing-cr \
-    "../static/StaticDownloadLink-this.txt" \
-    "../static/StaticDownloadLink-recent.txt" > /dev/null
+    "static/StaticDownloadLink-this.txt" \
+    "static/StaticDownloadLink-recent.txt" > /dev/null
 
 if (( $? == 0 )); then
     echo "The installed version of WSUS Offline Update is up-to-date."
     exit 0;
 else
-    URL=$(cat ../static/StaticDownloadLink-recent.txt)
-    echo Updating WSUS Offline Update..!
-    cd ../temp/
+    URL=$(cat static/StaticDownloadLink-recent.txt) 
+    $DEBUG We need to update wsusoffline!
+    cd /temp/
     wget -q $URL
     HASH=$(echo $URL |sed 's/\.zip/_hashes.txt/')
     wget -q $HASH
     FILE=$(echo $URL |sed 's/http:\/\/download.wsusoffline.net\///')
     HASH=$(echo $FILE|sed 's/\.zip/_hashes.txt/')
     if [[ -f $FILE ]]; then
-        SHA256=$(sha256sum ../temp/$FILE | awk '{print $1}')
+        SHA256=$(sha256sum /temp/$FILE | awk '{print $1}')
             if [[ $(grep -c "$SHA256,$FILE" $HASH) -gt 0 ]]; then
                 echo Download validated
-                cd ../temp/
+                cd /temp/
                 if [[ -d wsusoffline ]]; then
                     rm -r wsusoffline
                 fi
                 unzip -q $FILE
                 cd ..
-                cp -av temp/wsusoffline/* $BASEPATH
+                cp -av temp/wsusoffline/* "$BASEPATH"
                 else
                         echo Download failed
-                        if [[ -f ../temp/$FILE ]]; then
-                                rm -v ../temp/$FILE
+                        if [[ -f /temp/$FILE ]]; then
+                                rm -v /temp/$FILE
                         fi
-                        if [[ -f ../temp/$HASH ]]; then
-                                rm -v ../temp/$HASH
+                        if [[ -f /temp/$HASH ]]; then
+                                rm -v /temp/$HASH
                         fi
-                        if [[ -d ../temp/wsusoffline ]]; then
-                                rm -r ../temp/wsusoffline/
+                        if [[ -d /temp/wsusoffline ]]; then
+                                rm -r /temp/wsusoffline/
                         fi
             fi
     fi
 fi
 cd $BASEPATH
-# cleanup
-if [ -d ../temp ]; then
-   rm -rf ../temp
+# cleanup 
+if [ -d /temp ]; then
+   rm -rf /temp
 fi
+# if you have to set file permissions uncomment some out
+# find ../ -type d -print0 | xargs -0 chmod 755
+# find ../ -type f -print0 | xargs -0 chmod 644
+# chown -R nobody.nogroup ../
+#
+# make the shell scripts executabal again
 find ../ -name '*.sh' -print0 | xargs -0 chmod +x
 
-# SET CRON
-echo "${CRON} /bin/sh /cron/run.sh" > /cron/crontab
-# SET TIMEZONE
-echo "${TIMEZONE}" > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
-# RUN
-/bin/sh /cron/run.sh
