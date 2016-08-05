@@ -1,16 +1,5 @@
 #!/bin/sh
 
-## SIMLINK
-# ln -s /wsus/run.sh /etc/my_init.d/run.sh
-# ln -s /wsus/run.sh /etc/cron.weekly/run.sh
-
-#WSUS="/wsus"
-#SYSTEMS="all-61 all-63 all-100"
-#OFFICE="o2k13 o2k16"
-#LANGUAGE="nld"
-#PARAMS="/dotnet /msse /wddefs /wle /makeiso"
-#CRON="weekly"
-
 cd /wsus/ && ./update.sh
 sleep 10
 
