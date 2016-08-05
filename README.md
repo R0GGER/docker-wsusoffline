@@ -18,7 +18,7 @@ docker create
         -e OFFICE="o2k10 o2k13 o2k16" \
         -e LANGUAGE="enu" \
         -e PARAMS="/dotnet /msse /wddefs /wle" \
-        -e CRON="* 12,0 * * *" \
+        -e CRON="weekly" \
         -e TIMEZONE="Europe/Amsterdam" \
         r0gger/docker-wsusoffline
 ```
@@ -30,7 +30,7 @@ docker create
 
 ### Environment Variables
 **CRON:**   
-`* 12,0 * * *` - more info: http://crontab.guru
+`weekly` - hourly, daily, weekly, monthly
 
 **TIMEZONE:**   
 `Europe/Amsterdam` - more info: http://php.net/manual/en/timezones.europe.php
@@ -66,6 +66,7 @@ docker create
 `/makeiso` - Create ISO image   
 
 **Changelog:**   
+Aug 4, 2016 - Multiple fixes and simplify things.
 Apr 9, 2016 - Temp fix: hashdeep error wsusoffline 10.6.1   
 Apr 7, 2016 - Fix: timezone   
 Apr 6, 2016 - Fix: cron   
