@@ -66,7 +66,7 @@ docker create
 `/makeiso` - Create ISO image   
 
 **Changelog:**   
-Aug 4, 2016 - Multiple fixes and simplify things.
+Aug 4, 2016 - Multiple fixes and simplify things  
 Apr 9, 2016 - Temp fix: hashdeep error wsusoffline 10.6.1   
 Apr 7, 2016 - Fix: timezone   
 Apr 6, 2016 - Fix: cron   
