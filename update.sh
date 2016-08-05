@@ -1,25 +1,5 @@
 #!/bin/bash
  
-#
-# Author:       Carlos Pasqualini
-# email:        carlos [at] carlospasqualini.com.ar
-# Website:      http://www.carlospasqualini.com.ar/
-
-#
-# Rev: 3
-#
-# Contributors:
-#   spfef
-#   hbuhrmester
-#
-# License:      GPLv3+
-#               ../doc/license.txt
-#
-# disable Debugging
-#DEBUG=true
-# enable Debugging
-DEBUG=echo
-# 
 # Go to script's path as a start:
 BASEPATH="$(pwd)/wsusoffline"
 if [ ! -d /temp ]; then
@@ -37,7 +17,7 @@ if (( $? == 0 )); then
     exit 0;
 else
     URL=$(cat static/StaticDownloadLink-recent.txt) 
-    $DEBUG We need to update wsusoffline!
+    echo We need to update wsusoffline!
     cd /temp/
     wget -q $URL
     HASH=$(echo $URL |sed 's/\.zip/_hashes.txt/')
