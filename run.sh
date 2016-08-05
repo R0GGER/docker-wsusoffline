@@ -11,18 +11,18 @@
 #PARAMS="/dotnet /msse /wddefs /wle /makeiso"
 #CRON="weekly"
 
-cd $WSUS/ && ./update.sh
+cd /wsus/ && ./update.sh
 sleep 10
 
 for SYSTEMS in ${SYSTEMS}; do
     for LANGUAGE in ${LANGUAGE}; do
-        cd $WSUS/wsusoffline/sh && ./DownloadUpdates.sh ${SYSTEMS} ${LANGUAGE} ${PARAMS}
+        cd /wsus/wsusoffline/sh && ./DownloadUpdates.sh ${SYSTEMS} ${LANGUAGE} ${PARAMS}
     done
 done
 
 for OFFICE in ${OFFICE}; do
     for LANGUAGE in ${LANGUAGE}; do
-       cd $WSUS/wsusoffline/sh && ./DownloadUpdates.sh ${OFFICE} ${LANGUAGE}
+       cd /wsus/wsusoffline/sh && ./DownloadUpdates.sh ${OFFICE} ${LANGUAGE}
     done
 done
 
