@@ -2,6 +2,10 @@
 
 # Set time
 echo "${TIMEZONE}" > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
+
+# Set cron
+rm -rf /etc/cron.*/run.sh
+ln -s /wsus/run.sh /etc/cron.${CRON}/run.sh
  
 # Go to script's path as a start:
 BASEPATH="$(pwd)/wsusoffline"
