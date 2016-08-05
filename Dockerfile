@@ -16,8 +16,7 @@ ADD update.sh /wsus/
 ADD run.sh /wsus/
 RUN ln -s /wsus/run.sh /etc/my_init.d/run.sh
 RUN ln -s /wsus/run.sh /etc/cron.${CRON}/run.sh
-RUN chmod +x /etc/my_init.d/run.sh
-RUN chmod +x /etc/cron.${CRON}/run.sh
+RUN chmod +x /wsus/*.sh
 RUN ln -s /wsus/wsusoffline/client /client
 RUN ln -s /wsus/wsusoffline/iso /iso
 
