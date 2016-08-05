@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# Set time
+echo "${TIMEZONE}" > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
  
 # Go to script's path as a start:
 BASEPATH="$(pwd)/wsusoffline"
