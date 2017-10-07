@@ -9,7 +9,7 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 ENV SYSTEMS="w100-x64"
 ENV OFFICE="o2k16-x64"
 ENV LANGUAGE="enu"
-ENV PARAMS="-includesp -includecpp -includecpp -includewddefs8"
+ENV PARAMS="-includesp -includecpp -includedotnet -includewddefs8"
 ENV SLEEP=48h
 
 # WSUSOFFLINE
