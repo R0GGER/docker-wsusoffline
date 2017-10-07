@@ -16,7 +16,7 @@ docker create
         -e SYSTEMS="w100-x64" \
         -e OFFICE="o2k16-x64" \
         -e LANGUAGE="enu" \
-        -e PARAMS="-includesp -includecpp -includecpp -includewddefs8" \
+        -e PARAMS="-includesp -includecpp -includedotnet -includewddefs8" \
         -e SLEEP=48h \     
         r0gger/docker-wsusoffline
 ```
