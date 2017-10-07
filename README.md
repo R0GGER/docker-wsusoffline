@@ -73,7 +73,7 @@ Microsoft Security Essentials: localized installation files and virus definition
 Virus definition files for Windows 8 and higher. These are the same virus definition updates as for Microsoft Security Essentials, but without the localized installers.
 
 
-**Changelog:**
+**Changelog:**  
 Oct 7, 2017 - Multiple fixes
 Aug 4, 2016 - Multiple fixes and simplify things  
 Apr 9, 2016 - Temp fix: hashdeep error wsusoffline 10.6.1   
