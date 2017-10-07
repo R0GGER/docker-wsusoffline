@@ -48,7 +48,8 @@ docker create
 `o2k16` - Office 2016, 32-bit  
 `o2k16-x64` - Office 2016, 32-bit and 64-bit 
 
-**LANGUAGES:**   
+**LANGUAGES:**  
+`-e LANGUAGE="enu"` - Multiple languages can be joined to a comma-separated list like "nld,enu".   
 `enu deu nld esn fra ptg ptb ita rus plk ell csy dan nor sve fin jpn kor chs cht hun trk ara heb`
 
 **PARAMS:**  
