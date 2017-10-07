@@ -25,7 +25,7 @@ docker create
 
 ### Environment Variables
 **SLEEP:**   
-`-e SLEEP="48h"` - Delay for a specified amount of time ("m" for minutes, "h" for hours, or "d" for days).
+`-e SLEEP="48h"` - Example: It runs every 48 hours ("m" for minutes, "h" for hours, or "d" for days).
 
 **SYSTEMS:**    
 `w60` - Windows Server 2008, 32-bit  
