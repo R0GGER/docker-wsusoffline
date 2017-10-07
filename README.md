@@ -17,7 +17,7 @@ docker create
         -e OFFICE="o2k16-x64" \
         -e LANGUAGE="enu" \
         -e PARAMS="-includesp -includecpp -includecpp -includewddefs8" \
-        -e SLEEP="48h" \     
+        -e SLEEP=48h \     
         r0gger/docker-wsusoffline
 ```
 ### Volumes
@@ -25,9 +25,10 @@ docker create
 
 ### Environment Variables
 **SLEEP:**   
-`-e SLEEP="48h"` - Example: It runs every 48 hours ("m" for minutes, "h" for hours, or "d" for days).
+`-e SLEEP=48h` - Example: It runs every 48 hours ("m" for minutes, "h" for hours, or "d" for days).
 
-**SYSTEMS:**    
+**SYSTEMS:**  
+`-e SYSTEMS="w100-x64"`   
 `w60` - Windows Server 2008, 32-bit  
 `w60-x64` - Windows Server 2008, 64-bit  
 `w61` - Windows 7, 32-bit  
@@ -40,6 +41,7 @@ docker create
 
 
 **OFFICE:**   
+`-e OFFICE="o2k16-x64"`   
 `o2k7` - Office 2007, 32-bit  
 `o2k10` - Office 2010, 32-bit  
 `o2k10-x64` - Office 2010, 32-bit and 64-bit  
