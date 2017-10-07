@@ -15,7 +15,7 @@ docker create
         -v <path to updates>:/client \
         -e SYSTEMS="w100-x64" \
         -e OFFICE="o2k16-x64" \
-        -e LANGUAGE="nld" \
+        -e LANGUAGE="enu" \
         -e PARAMS="-includesp -includecpp -includecpp -includewddefs8" \
         -e SLEEP="48h" \     
         r0gger/docker-wsusoffline
