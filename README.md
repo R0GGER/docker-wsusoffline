@@ -20,7 +20,7 @@ docker create
         -e SLEEP="48h" \     
         r0gger/docker-wsusoffline
 ```
-### Volumes    
+### Volumes
 `-v <path to updates>:/client` - Default update folder
 
 ### Environment Variables
@@ -54,22 +54,22 @@ docker create
 `enu deu nld esn fra ptg ptb ita rus plk ell csy dan nor sve fin jpn kor chs cht hun trk ara heb`
 
 **PARAMS:**  
-`-includesp`
+`-includesp`   
 Include Service Packs
 
-`-includecpp`
+`-includecpp`   
 Include Visual C++ runtime libraries
 
-`-includedotnet`
+`-includedotnet`   
 Include .NET Frameworks: localized installation files and updates
 
-`-includewddefs`
+`-includewddefs`   
 Virus definition files for Windows Vista and 7. These virus definition files are only compatible with the original Windows Defender, which was included in Windows Vista and 7.
 
-`-includemsse`
+`-includemsse`   
 Microsoft Security Essentials: localized installation files and virus definition updates. Microsoft Security Essentials is an optional installation for Windows Vista and 7.
 
-`-includewddefs8`
+`-includewddefs8`   
 Virus definition files for Windows 8 and higher. These are the same virus definition updates as for Microsoft Security Essentials, but without the localized installers.
 
 
