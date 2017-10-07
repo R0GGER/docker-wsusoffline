@@ -18,7 +18,6 @@ ADD run.sh /wsus/
 RUN ln -s /wsus/run.sh /etc/my_init.d/run.sh
 RUN chmod +x /wsus/*.sh
 RUN ln -s /wsus/wsusoffline/client /client
-RUN ln -s /wsus/wsusoffline/iso /iso
 
-VOLUME ["/client", "/iso"]
+VOLUME ["/client"]
 CMD ["/sbin/my_init"]
