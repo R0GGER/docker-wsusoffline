@@ -2,7 +2,7 @@ FROM phusion/baseimage:latest
 MAINTAINER r0gger
 
 RUN apt-get update
-RUN apt-get install -y git wget cabextract hashdeep xmlstarlet trash-cli unzip
+RUN apt-get install -y wget cabextract hashdeep xmlstarlet trash-cli unzip
 RUN apt-get clean -y
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
