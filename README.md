@@ -40,8 +40,6 @@ docker create
 
 
 **OFFICE:**   
-`o2k7 o2k10 o2k13 o2k16 ofc`
-
 `o2k7` - Office 2007, 32-bit  
 `o2k10` - Office 2010, 32-bit  
 `o2k10-x64` - Office 2010, 32-bit and 64-bit  
