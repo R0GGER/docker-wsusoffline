@@ -1,14 +1,8 @@
 #!/bin/bash
 
-# Set time
-echo "${TIMEZONE}" > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
-
-# Set cron
-rm -rf /etc/cron.*/run.sh
-ln -s /wsus/run.sh /etc/cron.${CRON}/run.sh
- 
 # Go to script's path as a start:
-BASEPATH="$(pwd)/wsusoffline"
+cd "$(dirname "$0")"
+BASEPATH=$(pwd)/wsusoffline
 if [ ! -d /temp ]; then
    mkdir /temp
 fi
@@ -41,7 +35,7 @@ else
                 fi
                 unzip -q $FILE
                 cd ..
-                cp -av temp/wsusoffline/* "$BASEPATH"
+                cp -av /temp/wsusoffline/* "$BASEPATH"
                 else
                         echo Download failed
                         if [[ -f /temp/$FILE ]]; then
@@ -67,5 +61,5 @@ fi
 # chown -R nobody.nogroup ../
 #
 # make the shell scripts executabal again
+find ../ -name '*.bash' -print0 | xargs -0 chmod +x
 find ../ -name '*.sh' -print0 | xargs -0 chmod +x
-
