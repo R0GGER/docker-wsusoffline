@@ -1,15 +1,16 @@
 FROM phusion/baseimage:latest
-MAINTAINER R0GGER
+MAINTAINER r0gger
 
-RUN apt-get update 
-RUN apt-get install -y unzip md5deep wget xmlstarlet cabextract genisoimage tzdata
+RUN apt-get update
+RUN apt-get install -y git wget cabextract hashdeep xmlstarlet trash-cli unzip
+RUN apt-get clean -y
+RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENV SYSTEMS="all-61 all-63 all-100"
-ENV OFFICE="o2k13 o2k16"
-ENV LANGUAGE="nld enu"
-ENV PARAMS="/dotnet /msse /wddefs /wle"
-ENV CRON="daily"
-ENV TIMEZONE="Europe/Amsterdam"
+ENV SYSTEMS="w100-x64"
+ENV OFFICE="o2k16-x64"
+ENV LANGUAGE="nld"
+ENV PARAMS="-includesp -includecpp -includecpp -includewddefs8"
+ENV SLEEP=48h
 
 # WSUSOFFLINE
 ADD update.sh /wsus/
