@@ -20,15 +20,16 @@ docker create
         -e SLEEP=48h \     
         r0gger/docker-wsusoffline
 ```
-### Volumes
+### Volumes 
 `-v <path to updates>:/client` - Default update folder
 
 ### Environment Variables
-**SLEEP:**   
-`-e SLEEP=48h` - Example: It runs every 48 hours ("m" for minutes, "h" for hours, or "d" for days).
+**SLEEP:**  
+(`-e SLEEP=48h`)  
+Example: It runs every 48 hours ("m" for minutes, "h" for hours, or "d" for days).
 
 **SYSTEMS:**  
-`-e SYSTEMS="w100-x64"`   
+(`-e SYSTEMS="w100-x64"`)  
 `w60` - Windows Server 2008, 32-bit  
 `w60-x64` - Windows Server 2008, 64-bit  
 `w61` - Windows 7, 32-bit  
@@ -37,11 +38,10 @@ docker create
 `w63` - Windows 8.1, 32-bit  
 `w63-x64` - Windows 8.1 / Server 2012 R2, 64-bit  
 `w100` - Windows 10, 32-bit  
-`w100-x64` - Windows 10 / Server 2016, 64-bit
+`w100-x64` - Windows 10 / Server 2016, 64-bit   
 
-
-**OFFICE:**   
-`-e OFFICE="o2k16-x64"`   
+**OFFICE:**  
+(`-e OFFICE="o2k16-x64"`)  
 `o2k7` - Office 2007, 32-bit  
 `o2k10` - Office 2010, 32-bit  
 `o2k10-x64` - Office 2010, 32-bit and 64-bit  
@@ -51,7 +51,8 @@ docker create
 `o2k16-x64` - Office 2016, 32-bit and 64-bit 
 
 **LANGUAGES:**  
-`-e LANGUAGE="enu"` - Multiple languages can be joined to a comma-separated list like "nld,enu".   
+(`-e LANGUAGE="enu"`)  
+Multiple languages can be joined to a comma-separated list like "nld,enu".   
 `enu deu nld esn fra ptg ptb ita rus plk ell csy dan nor sve fin jpn kor chs cht hun trk ara heb`
 
 **PARAMS:**  
