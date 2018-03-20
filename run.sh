@@ -25,12 +25,14 @@ sleep 10
         cd /wsus/wsusoffline/sh && ./download-updates.bash ${OFFICE} ${LANGUAGE}
     done
   done
+  
   if [[ $ISO == y* ]]; then
 	mkdir -p /wsus/wsusoffline/client/iso
 	echo "Creating ISO..."
       	genisoimage -iso-level 4 -J -joliet-long -rational-rock -allow-limited-size -quiet -o /wsus/wsusoffline/client/iso/wsus.iso -m '@*' -m '.*' -m 'iso' /wsus/wsusoffline/client
 	echo "Done"
   fi    
+  
   echo "Sleeping for $SLEEP before next download."
   sleep "$SLEEP"
 done
