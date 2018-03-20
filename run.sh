@@ -29,7 +29,7 @@ sleep 10
   if [[ $ISO == y* ]]; then
 	mkdir -p /wsus/wsusoffline/client/iso
 	echo "Creating ISO..."
-      	genisoimage -iso-level 4 -J -joliet-long -rational-rock -allow-limited-size -quiet -o /wsus/wsusoffline/client/iso/wsus.iso -m '@*' -m '.*' -m 'iso' /wsus/wsusoffline/client
+      	genisoimage -iso-level 4 -J -joliet-long -rational-rock -allow-limited-size -quiet -o /wsus/wsusoffline/client/iso/wsusoffline.iso -m '@*' -m '.*' -m 'iso' /wsus/wsusoffline/client
 	echo "Done"
   fi    
   
