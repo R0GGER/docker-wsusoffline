@@ -1,10 +1,10 @@
 # WSUS Offline Update
 
-Using [WSUS Offline Update](http://wsusoffline.net/), you can update any computer running Microsoft Windows and Office safely, quickly and without an Internet connection.   
+Using [WSUS Offline Update](http://wsusoffline.net/), you can update any computer running Microsoft Windows and Office safely, quickly and without an Internet connection (image also available @ [Docker](https://hub.docker.com/r/r0gger/docker-wsusoffline/)).   
 
 -----------
 ### Auto update
-WSUS Offline Update and wsusoffline will be updated on each start or restart of the container (image also available @ [Docker](https://hub.docker.com/r/r0gger/docker-wsusoffline/)).   
+WSUS Offline Update and wsusoffline will be updated on each start or restart of the container.     
 
 ### Usage
 By default it runs every 2 days to download updates from Microsoft.     
