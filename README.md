@@ -17,7 +17,7 @@ docker create
         -e OFFICE="o2k16-x64" \
         -e LANGUAGE="enu" \
         -e PARAMS="-includesp -includecpp -includedotnet -includewddefs8" \
-        -e ISO=no
+        -e ISO=no \
         -e SLEEP=48h \     
         r0gger/docker-wsusoffline
 ```
