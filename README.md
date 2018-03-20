@@ -78,7 +78,7 @@ Virus definition files for Windows 8 and higher. These are the same virus defini
 **ISO:**   
 `-e ISO=no`   
 Create an ISO after downloading wsus updates, yes or no.   
-Default: no (location ISO-folder: /client/iso).   
+Path ISO folder: /client/iso   
 
 **Changelog:**  
 Mar 20, 2018 - Add: Create an ISO after downloading wsus updates   
