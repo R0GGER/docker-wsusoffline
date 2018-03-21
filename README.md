@@ -1,10 +1,10 @@
 # WSUS Offline Update
 
-Using [WSUS Offline Update](http://wsusoffline.net/), you can update any computer running Microsoft Windows and Office safely, quickly and without an Internet connection (image also available @ [Docker](https://hub.docker.com/r/r0gger/docker-wsusoffline/)).   
+Using [WSUS Offline Update](http://wsusoffline.net/), you can update any computer running Microsoft Windows and Office safely, quickly and without an Internet connection (image also available @ [docker](https://hub.docker.com/r/r0gger/docker-wsusoffline/)).   
 
 -----------
 ### Auto update
-WSUS Offline Update and wsusoffline will be updated on each start or restart of the container.     
+WSUS Offline Update and wsusoffline will be updated on each container start or restart.     
 
 ### Usage
 By default it runs every 2 days to download updates from Microsoft.     
@@ -78,10 +78,10 @@ Virus definition files for Windows 8 and higher. These are the same virus defini
 **ISO:**   
 `-e ISO=no`   
 Create an ISO after downloading wsus updates, yes or no.   
-Path ISO folder: /client/iso   
+Path iso-file: /client/iso   
 
 **Changelog:**  
-Mar 20, 2018 - Add: Create an ISO after downloading wsus updates   
+Mar 20, 2018 - New: Create an ISO after downloading wsus updates   
 Oct 7, 2017 - Multiple fixes   
 Aug 4, 2016 - Multiple fixes and simplify things  
 Apr 9, 2016 - Temp fix: hashdeep error wsusoffline 10.6.1   
