@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.22
+FROM phusion/baseimage:latest
 MAINTAINER r0gger
 
 RUN apt-get update
