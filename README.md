@@ -81,6 +81,7 @@ Create an ISO after downloading wsus updates, yes or no.
 Path iso-file: /client/iso   
 
 **Changelog:**  
+Apr 19, 2018 - Fix: root problem (credits to https://github.com/bigwave)   
 Mar 20, 2018 - New: Create an ISO after downloading wsus updates   
 Oct 7, 2017 - Multiple fixes   
 Aug 4, 2016 - Multiple fixes and simplify things  
