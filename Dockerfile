@@ -21,5 +21,10 @@ RUN ln -s /wsus/run.sh /etc/my_init.d/run.sh
 RUN chmod +x /wsus/*.sh
 RUN ln -s /wsus/wsusoffline/client /client
 
+#Enable SSH
+RUN rm -f /etc/service/sshd/down
+RUN /usr/sbin/enable_insecure_key
+EXPOSE 22
+
 VOLUME ["/client"]
 CMD ["/sbin/my_init"]
