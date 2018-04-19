@@ -16,6 +16,7 @@ ENV SLEEP=48h
 # WSUSOFFLINE
 ADD update.sh /wsus/
 ADD run.sh /wsus/
+ADD download.sh /wsus/
 RUN ln -s /wsus/run.sh /etc/my_init.d/run.sh
 RUN chmod +x /wsus/*.sh
 RUN ln -s /wsus/wsusoffline/client /client
