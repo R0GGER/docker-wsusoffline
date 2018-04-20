@@ -1,3 +1,4 @@
+#!/bin/bash
 SLEEP=${SLEEP:-"$SLEEP"}
 
 ctrlc()
