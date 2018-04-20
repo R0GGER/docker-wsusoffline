@@ -30,7 +30,8 @@ docker create
 Example: It runs every 48 hours ("m" for minutes, "h" for hours, or "d" for days).
 
 **SYSTEMS:**  
-`-e SYSTEMS="w100-x64"`  
+`-e SYSTEMS="w100-x64"`   
+Multiple updates can be joined to a comma-separated list like "w60,w100-x64".   
 `w60` - Windows Server 2008, 32-bit  
 `w60-x64` - Windows Server 2008, 64-bit  
 `w61` - Windows 7, 32-bit  
@@ -43,6 +44,7 @@ Example: It runs every 48 hours ("m" for minutes, "h" for hours, or "d" for days
 
 **OFFICE:**  
 `-e OFFICE="o2k16-x64"`  
+Multiple updates can be joined to a comma-separated list like "o2k16,o2k16-x64".   
 `o2k7` - Office 2007, 32-bit  
 `o2k10` - Office 2010, 32-bit  
 `o2k10-x64` - Office 2010, 32-bit and 64-bit  
