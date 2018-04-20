@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.9.22
+FROM phusion/baseimage:latest
 MAINTAINER r0gger
 
 RUN apt-get update
@@ -17,7 +17,8 @@ ENV SLEEP=48h
 ADD update.sh /wsus/
 ADD run.sh /wsus/
 ADD download.sh /wsus/
-RUN ln -s /wsus/run.sh /etc/my_init.d/run.sh
+RUN mkdir /etc/service/wsusoffline
+RUN ln -s /wsus/run.sh /etc/service/wsusoffline/run
 RUN chmod +x /wsus/*.sh
 RUN ln -s /wsus/wsusoffline/client /client
 
