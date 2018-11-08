@@ -86,14 +86,14 @@ Path iso-file: /client/iso
 Set the search order for the supported download utilities.   
    
 **Changelog:**  
-Nov 8, 2018 - New: choose between aria2c or wget   
-Apr 19, 2018 - Fix: root problem, credits to [bigwave](https://github.com/bigwave)   
-Mar 20, 2018 - New: Create an ISO after downloading wsus updates   
+Nov 8, 2018 - New: Download utilities - aria2c and wget   
+Apr 19, 2018 - Fix: Root problem, credits to [bigwave](https://github.com/bigwave)   
+Mar 20, 2018 - New: Create an iso after downloading wsus updates   
 Oct 7, 2017 - Multiple fixes   
 Aug 4, 2016 - Multiple fixes and simplify things  
-Apr 9, 2016 - Temp fix: hashdeep error wsusoffline 10.6.1   
-Apr 7, 2016 - Fix: timezone   
-Apr 6, 2016 - Fix: cron   
+Apr 9, 2016 - Temp fix: Hashdeep error wsusoffline 10.6.1   
+Apr 7, 2016 - Fix: Timezone   
+Apr 6, 2016 - Fix: Cron   
 Apr 5, 2016 - Release   
     
 **Credits:**   
