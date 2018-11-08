@@ -1,4 +1,4 @@
-supported_downloaders="aria2c wget"
+supported_downloaders="$DOWNLOADERS"
 proxy_server=""
 secure_proxy_server=""
 no_proxy_server=""
