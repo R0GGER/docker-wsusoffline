@@ -77,12 +77,16 @@ Microsoft Security Essentials: localized installation files and virus definition
 `-includewddefs8`   
 Virus definition files for Windows 8 and higher. These are the same virus definition updates as for Microsoft Security Essentials, but without the localized installers.
 
-**ISO:**   
+**ADVANCED SETTINGS:**   
 `-e ISO=no`   
 Create an ISO after downloading wsus updates, yes or no.   
-Path iso-file: /client/iso   
-
+Path iso-file: /client/iso 
+        
+`-e DOWNLOADERS="aria2c wget"`   
+Set the search order for the supported download utilities.   
+   
 **Changelog:**  
+Nov 8, 2018 - New: choose between aria2c or wget   
 Apr 19, 2018 - Fix: root problem, credits to [bigwave](https://github.com/bigwave)   
 Mar 20, 2018 - New: Create an ISO after downloading wsus updates   
 Oct 7, 2017 - Multiple fixes   
