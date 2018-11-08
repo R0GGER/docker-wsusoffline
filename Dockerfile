@@ -12,6 +12,7 @@ ENV LANGUAGE="enu"
 ENV PARAMS="-includesp -includecpp -includedotnet -includewddefs8"
 ENV ISO="no"
 ENV SLEEP=48h
+ENV DOWNLOADERS="aria2c wget"
 
 # WSUSOFFLINE
 ADD update.sh /wsus/
