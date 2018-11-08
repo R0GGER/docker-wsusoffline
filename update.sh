@@ -63,3 +63,4 @@ fi
 # make the shell scripts executabal again
 find ../ -name '*.bash' -print0 | xargs -0 chmod +x
 find ../ -name '*.sh' -print0 | xargs -0 chmod +x
+cp -rf /wsus/preferences.bash /wsus/wsusoffline/sh/preferences.bash
