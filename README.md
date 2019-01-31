@@ -12,7 +12,7 @@ By default it runs every 2 days to download updates from Microsoft.
 ```
 docker create 
         --name=wsusoffline \
-        -v <path to updates>:/client \
+        -v [path to updates]:/client \
         -e SYSTEMS="w100-x64" \
         -e OFFICE="o2k16-x64" \
         -e LANGUAGE="enu" \
@@ -22,7 +22,7 @@ docker create
         r0gger/docker-wsusoffline
 ```
 ### Volumes 
-`-v <path to updates>:/client` - Default update folder
+`-v [path to updates]:/client` - Default update folder
 
 ### Environment Variables
 **SLEEP:**  
