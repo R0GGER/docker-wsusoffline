@@ -6,8 +6,8 @@ RUN apt-get install -y wget cabextract hashdeep xmlstarlet trash-cli unzip iputi
 RUN apt-get clean -y
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENV SYSTEMS="w100-x64"
-ENV OFFICE="o2k16-x64"
+ENV SYSTEMS="all"
+ENV OFFICE=""
 ENV LANGUAGE="enu"
 ENV PARAMS="-includesp -includecpp -includedotnet -includewddefs8"
 ENV ISO="no"
