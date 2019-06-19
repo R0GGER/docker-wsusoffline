@@ -24,8 +24,7 @@ trap 'ctrlc' INT
   done
 
   if [[ $ISO == y* ]]; then
-	mkdir -p /wsus/wsusoffline/client/iso
-	echo "Creating ISO..."
-      	genisoimage -iso-level 4 -J -joliet-long -rational-rock -allow-limited-size -quiet -o /wsus/wsusoffline/client/iso/wsusoffline.iso -m '@*' -m '.*' -m 'iso' /wsus/wsusoffline/client
-	echo "Done"
+        mkdir -p /wsus/wsusoffline/client/iso
+        rm -rf /wsus/wsusoffline/client/iso/*_wsusoffline-*.iso
+        cd /wsus/wsusoffline/sh && ./create-iso-image.bash ${SYSTEMS} ${OFFICE} ${PARAMS} -output-path /wsus/wsusoffline/client/iso
   fi
