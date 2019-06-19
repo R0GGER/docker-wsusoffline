@@ -9,7 +9,7 @@ RUN apt-get update && \
 ENV SYSTEMS="all"
 ENV OFFICE=""
 ENV LANGUAGE="enu"
-ENV PARAMS="-includesp -includecpp -includedotnet -includewddefs8"
+ENV PARAMS="-includesp -includecpp -includedotnet -includemsse"
 ENV ISO="no"
 ENV SLEEP=48h
 ENV DOWNLOADERS="aria2c wget"
