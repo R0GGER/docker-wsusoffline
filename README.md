@@ -91,17 +91,23 @@ Virus definition files for Windows Vista and 7. These virus definition files are
 Microsoft Security Essentials: localized installation files and virus definition updates. Microsoft Security Essentials is an optional installation for Windows Vista and 7.
 
 `-includewddefs8`   
-Virus definition files for Windows 8 and higher. These are the same virus definition updates as for Microsoft Security Essentials, but without the localized installers.
+Virus definition files for Windows 8 and higher. These are the same virus definition updates as for Microsoft Security Essentials, but without the localized installers.   
+Therefore, "wddefs8" is a subset of "msse", and you should use -includemsse instead for the internal lists "all" and "all-win".   
 
 **ADVANCED SETTINGS:**   
 `-e ISO=no`   
 Create an ISO after downloading wsus updates, yes or no.   
-Path iso-file: /client/iso 
+Path iso-file: /client/iso   
+    
+**Please note!**   
+Docker-wsusoffline creates an ISO image of the whole client directory which can result in a (very) large ISO-file!   
+ISO image - Profile "All" (All Windows and Office updates, 32-bit and 64-bit) = ~100GB   
         
 `-e DOWNLOADERS="aria2c wget"`   
 Set the search order for the supported download utilities.   
    
 **Changelog:**  
+Jun 19, 2019 - New: use ISO creation script from wsusoffline  
 Nov 8, 2018 - New: Download utilities - aria2c and wget   
 Apr 19, 2018 - Fix: Root problem, credits to [bigwave](https://github.com/bigwave)   
 Mar 20, 2018 - New: Create an iso after downloading wsus updates   
