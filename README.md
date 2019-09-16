@@ -17,7 +17,7 @@ WSUS Offline Update and wsusoffline will be updated on each container start or r
 By default it runs every 2 days to download updates from Microsoft.     
 
 ```
-docker run -d     
+docker run -d \
         --name=wsusoffline \
         -v [path to updates]:/client \
         -e SYSTEMS="w100-x64" \
@@ -25,8 +25,8 @@ docker run -d
         -e LANGUAGE="enu" \
         -e PARAMS="-includesp -includecpp -includedotnet -includewddefs8" \
         -e ISO=no \
-        -e SLEEP=48h \     
-        -e DOWNLOADERS="aria2c wget" \     
+        -e SLEEP=48h \
+        -e DOWNLOADERS="aria2c wget" \
         r0gger/docker-wsusoffline
 ```
 ### Volumes 
