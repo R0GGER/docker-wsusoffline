@@ -26,6 +26,7 @@ docker create
         -e PARAMS="-includesp -includecpp -includedotnet -includewddefs8" \
         -e ISO=no \
         -e SLEEP=48h \     
+        -e DOWNLOADERS="aria2c wget" \     
         r0gger/docker-wsusoffline
 ```
 ### Volumes 
