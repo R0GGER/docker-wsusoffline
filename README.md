@@ -17,7 +17,7 @@ WSUS Offline Update and wsusoffline will be updated on each container start or r
 By default it runs every 2 days to download updates from Microsoft.     
 
 ```
-docker create 
+docker run -d     
         --name=wsusoffline \
         -v [path to updates]:/client \
         -e SYSTEMS="w100-x64" \
