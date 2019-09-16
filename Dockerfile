@@ -6,8 +6,8 @@ RUN apt-get update && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENV SYSTEMS="all"
-ENV OFFICE=""
+ENV SYSTEMS="w100-x64"
+ENV OFFICE="o2k16-x64"
 ENV LANGUAGE="enu"
 ENV PARAMS="-includesp -includecpp -includedotnet -includemsse"
 ENV ISO="no"
