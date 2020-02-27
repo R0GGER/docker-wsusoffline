@@ -3,10 +3,10 @@
 Using [WSUS Offline Update](http://wsusoffline.net/), you can update any computer running Microsoft Windows and Office safely, quickly and without an Internet connection (image also available @ [docker](https://hub.docker.com/r/r0gger/docker-wsusoffline/)).   
 
 <p align="center">
-<a href="https://hub.docker.com/r/r0gger/docker-wsusoffline"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/r0gger/docker-wsusoffline.svg"/></a>
-<a href="https://hub.docker.com/r/r0gger/docker-wsusoffline"><img alt="Docker Stars" src="https://img.shields.io/docker/stars/r0gger/docker-wsusoffline.svg"/></a>  
-<a href="https://hub.docker.com/r/r0gger/docker-wsusoffline"><img alt="Docker Build Status" src="https://img.shields.io/docker/build/r0gger/docker-wsusoffline.svg"/></a> 
-<a href="https://github.com/R0GGER/docker-wsusoffline"><img alt="GitHub stars" src="https://img.shields.io/github/stars/r0gger/docker-wsusoffline.svg?style=social"></a>         
+<a href="https://hub.docker.com/r/r0gger/docker-wsusoffline"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/r0gger/docker-wsusoffline"/></a>
+<a href="https://hub.docker.com/r/r0gger/docker-wsusoffline"><img alt="Docker Stars" src="https://img.shields.io/docker/stars/r0gger/docker-wsusoffline"/></a>  
+<a href="https://hub.docker.com/r/r0gger/docker-wsusoffline"><img alt="Docker Build Status" src="https://img.shields.io/docker/build/r0gger/docker-wsusoffline"/></a> 
+<a href="https://github.com/R0GGER/docker-wsusoffline"><img alt="GitHub stars" src="https://img.shields.io/github/stars/r0gger/docker-wsusoffline?style=social"></a>         
 </p>  
 
 -----------
