@@ -7,7 +7,7 @@ if [ ! -d /temp ]; then
    mkdir /temp
 fi
 wget --timestamping --directory-prefix="static" \
-    "http://download.wsusoffline.net/StaticDownloadLink-recent.txt"
+    "https://download.wsusoffline.net/StaticDownloadLink-recent.txt"
 
 diff --strip-trailing-cr \
     "static/StaticDownloadLink-this.txt" \
@@ -19,7 +19,7 @@ cd /temp/
 wget -q $URL
 HASH=$(echo $URL |sed 's/\.zip/_hashes.txt/')
 wget -q $HASH
-FILE=$(echo $URL |sed 's/http:\/\/download.wsusoffline.net\///')
+FILE=$(echo $URL |sed 's/https:\/\/download.wsusoffline.net\///')
 HASH=$(echo $FILE|sed 's/\.zip/_hashes.txt/')
 
 if [[ -f $FILE ]]; then
