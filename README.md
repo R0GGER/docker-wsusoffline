@@ -114,7 +114,7 @@ ISO image - Profile "All" (All Windows and Office updates, 32-bit and 64-bit) = 
 Set the search order for the supported download utilities.   
    
 **Changelog:**  
-Oct 8, 2021 - New: WSUS Offline Update Community Edition
+Oct 8, 2021 - New: WSUS Offline Update Community Edition    
 Aug 14, 2020 - Fix: update.sh - https   
 Jun 19, 2019 - New: use ISO creation script from wsusoffline  
 Nov 8, 2018 - New: Download utilities - aria2c and wget   
