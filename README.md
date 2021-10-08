@@ -1,6 +1,6 @@
-# WSUS Offline Update
+# WSUS Offline Update Community Edition
 
-Using [WSUS Offline Update](http://wsusoffline.net/), you can update any computer running Microsoft Windows and Office safely, quickly and without an Internet connection (image also available @ [docker](https://hub.docker.com/r/r0gger/docker-wsusoffline/)).   
+Using [WSUS Offline Update Community Edition](https://gitlab.com/wsusoffline/wsusoffline "WSUS Offline Update CE"), you can update any computer running Microsoft Windows and Office safely, quickly and without an Internet connection (image also available @ [docker](https://hub.docker.com/r/r0gger/docker-wsusoffline/)).   
 
 <p align="center">
 <a href="https://hub.docker.com/r/r0gger/docker-wsusoffline"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/r0gger/docker-wsusoffline"/></a>
@@ -9,11 +9,17 @@ Using [WSUS Offline Update](http://wsusoffline.net/), you can update any compute
 </p>  
 
 -----------
+
 ### Auto update
-WSUS Offline Update and wsusoffline will be updated on each container start or restart.     
+WSUS Offline Update will be updated on each container start or restart.     
 
 ### Usage
-By default it runs every 2 days to download updates from Microsoft.     
+By default it runs every 2 days to download updates from Microsoft.   
+
+|  | Git Branch | Docker Tag |
+| --- | --- | --- |
+| WSUS Offline Update ([link](https://www.wsusoffline.net/ "WSUS Offline Update")) | master | latest |
+| WSUS Offline Update Community Edition ([link](https://gitlab.com/wsusoffline/wsusoffline "WSUS Offline Update CE")) | ce  | ce  |
 
 ```
 docker run -d \
@@ -26,8 +32,9 @@ docker run -d \
         -e ISO=no \
         -e SLEEP=48h \
         -e DOWNLOADERS="aria2c wget" \
-        r0gger/docker-wsusoffline
+        r0gger/docker-wsusoffline:ce
 ```
+
 ### Volumes 
 `-v [path to updates]:/client` - Default update folder
 
@@ -105,20 +112,17 @@ ISO image - Profile "All" (All Windows and Office updates, 32-bit and 64-bit) = 
         
 `-e DOWNLOADERS="aria2c wget"`   
 Set the search order for the supported download utilities.   
-   
-**Changelog:**  
-Aug 14, 2020 - Fix: update.sh - https   
-Jun 19, 2019 - New: use ISO creation script from wsusoffline  
-Nov 8, 2018 - New: Download utilities - aria2c and wget   
-Apr 19, 2018 - Fix: Root problem, credits to [bigwave](https://github.com/bigwave)   
-Mar 20, 2018 - New: Create an iso after downloading wsus updates   
-Oct 7, 2017 - Multiple fixes   
-Aug 4, 2016 - Multiple fixes and simplify things  
-Apr 9, 2016 - Temp fix: Hashdeep error wsusoffline 10.6.1   
-Apr 7, 2016 - Fix: Timezone   
-Apr 6, 2016 - Fix: Cron   
-Apr 5, 2016 - Release   
-    
-**Credits:**   
+      
+### Credits
 WSUS Offline Update @ http://wsusoffline.net   
-wsusoffline forum-user:  hbuhrmester, cpasqualini
+wsusoffline forum-user:  hbuhrmester, cpasqualini    
+      
+| Changelog ||
+| --- | --- |
+| 08-10-2021 | Added WSUS Offline Update Community Edition |
+| 14-08-2020 | HTTPS fix update.sh. |
+| 19-06-2019 | Create ISO from all downloaded updates. |
+| 08-11-2018 | Download updates with aria2c or wget. |
+| 19-04-2018 | Fix root issue, credits to @[bigwave](https://github.com/bigwave). |
+| 20-05-2018 | Create an iso after downloading wsus updates. |
+| 2017 - 2016 | Release and multiple fixes. |    
