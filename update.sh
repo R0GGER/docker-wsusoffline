@@ -6,21 +6,30 @@ BASEPATH=$(pwd)/wsusoffline
 if [ ! -d /temp ]; then
    mkdir /temp
 fi
-wget --timestamping --directory-prefix="static" \
-    "https://download.wsusoffline.net/StaticDownloadLink-recent.txt"
 
-diff --strip-trailing-cr \
-    "static/StaticDownloadLink-this.txt" \
-    "static/StaticDownloadLink-recent.txt" > /dev/null
-
-URL=$(cat static/StaticDownloadLink-recent.txt)
 echo Updating wsusoffline...
 cd /temp/
+
+wget --timestamping --directory-prefix="static" \
+    "https://gitlab.com/wsusoffline/wsusoffline-sdd/-/raw/master/StaticDownloadLink-recent.txt"
+
+URL=$(sed  -n '1p' < static/StaticDownloadLink-recent.txt)
+URL=$( echo $URL | sed 's/\r//g')
+echo "URL: "  $URL
 wget -q $URL
-HASH=$(echo $URL |sed 's/\.zip/_hashes.txt/')
-wget -q $HASH
-FILE=$(echo $URL |sed 's/https:\/\/download.wsusoffline.net\///')
+
+HASH=$(head -2 static/StaticDownloadLink-recent.txt)
+HASH=$(echo $HASH | sed 's/\r//g')
+echo "HASH:----> "  $HASH
+wget  $HASH
+
+
+FILE=$(echo $URL |sed 's/https:\/\/gitlab.com\/wsusoffline\/wsusoffline\/uploads\/.*\///')
 HASH=$(echo $FILE|sed 's/\.zip/_hashes.txt/')
+
+echo "FILE:     " $FILE
+echo "HASH:     " $HASH
+  
 
 if [[ -f $FILE ]]; then
     SHA256=$(sha256sum /temp/$FILE | awk '{print $1}')
