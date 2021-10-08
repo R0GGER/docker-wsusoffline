@@ -1,6 +1,6 @@
 # WSUS Offline Update (and Community Edition)
 
-Using [WSUS Offline Update](http://wsusoffline.net/), you can update any computer running Microsoft Windows and Office safely, quickly and without an Internet connection (image also available @ [docker](https://hub.docker.com/r/r0gger/docker-wsusoffline/)).   
+Using [WSUS Offline Update](http://wsusoffline.net/) or [WSUS Offline Update Community Edition](https://gitlab.com/wsusoffline/wsusoffline "WSUS Offline Update CE"), you can update any computer running Microsoft Windows and Office safely, quickly and without an Internet connection (image also available @ [docker](https://hub.docker.com/r/r0gger/docker-wsusoffline/)).   
 
 <p align="center">
 <a href="https://hub.docker.com/r/r0gger/docker-wsusoffline"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/r0gger/docker-wsusoffline"/></a>
@@ -19,7 +19,7 @@ By default it runs every 2 days to download updates from Microsoft.
 |  | Git Branch | Docker Tag |
 | --- | --- | --- |
 | WSUS Offline Update ([link](https://www.wsusoffline.net/ "WSUS Offline Update")) | master | latest |
-| WSUS Offline Update Community Edition ([link](https://gitlab.com/wsusoffline/wsusoffline "WSUS Offline Update")) | ce  | ce  |
+| WSUS Offline Update Community Edition ([link](https://gitlab.com/wsusoffline/wsusoffline "WSUS Offline Update CE")) | ce  | ce  |
 
 ```
 docker run -d \
