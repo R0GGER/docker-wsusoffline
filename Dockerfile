@@ -2,7 +2,7 @@ FROM phusion/baseimage:master
 MAINTAINER r0gger
 
 RUN apt-get update && \
-    apt-get install -y wget cabextract hashdeep xmlstarlet trash-cli unzip iputils-ping genisoimage aria2 rsync && \
+    apt-get install -y wget cabextract hashdeep xmlstarlet trash-cli unzip iputils-ping genisoimage aria2 rsync jq && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
